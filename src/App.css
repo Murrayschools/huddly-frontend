@@ -1,6 +1,151 @@
 .App {
   text-align: center;
+  background-color: #00151e;
 }
+
+.App-header {
+  background-color: transparent;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-app-region: drag;
+  /* -webkit-user-select: text;
+  -webkit-app-region: no-drag; */
+}
+
+.App-header-2 {
+  all: inherit;
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-app-region: no-drag;
+}
+
+.Header-bar {
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 5vh;
+  display: block;
+  background: rgb(0,21,30);
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(255, 255, 255, 0.05) 100%);
+
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+.x-button {
+  display: block;
+  /* margin: 0; */
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  background-color: transparent;
+  color: white;
+  text-align: center;
+
+  border: none;
+  width: 5vh;
+  height: 100%;
+  float: right;
+
+  transition: background-color 0.5s;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+.x-button:hover {
+  background-color: red;
+}
+
+.footer-bar {
+  height: 3vh;
+  background: rgb(0,21,30);
+  background: linear-gradient(0deg, rgb(0, 0, 0, 0.5) 0%, rgba(0,0,0,0) 100%);
+}
+
+.footer-text {
+  padding: 0;
+  margin: 0;
+  font-size: 0.6em;
+  color: white;
+  text-align: center;
+}
+
+#client-disconnect {
+  position: fixed;
+  padding: 10px;
+  border: 2px solid rgb(197, 0, 0);
+  border-radius: 8px;
+  background-color: rgb(109, 0, 18);
+  color: white;
+  bottom: 4vh;
+  left: 1vw;
+  transition: bottom 1s;
+}
+
+#client-connect {
+  position: fixed;
+  padding: 10px;
+  border: 2px solid rgb(95, 253, 70);
+  border-radius: 8px;
+  background-color: rgb(64, 172, 48);
+  color: white;
+  bottom: -8vh;
+  left: 1vw;
+  transition: bottom 1s ease-out 3s;
+}
+
+.not-panel {
+  /* positions */
+  position: absolute;
+  bottom: 4vh;
+  left: 1vw;
+
+  /* Overflow */
+  overflow: hidden;
+
+  /* Borders */
+  border: 1px solid white;
+  border-radius: 8px;
+
+  /* Grid */
+  display: grid;
+  grid-template-columns: 5% 95%;
+
+  /* Color */
+  background-color: #04212e;
+  opacity: 1;
+  
+  /* Transitions */
+  transition: opacity 1s 2s;
+}
+
+.not-color-div {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.not-text {
+  color: white;
+  text-align: left;
+  padding: 2vh 2vw;
+  margin: 0;
+  z-index: 200;
+}
+
+.not-text:hover {
+  /* Color */
+  background-color: white;
+} 
 
 .App-logo {
   height: 40vmin;
@@ -13,19 +158,30 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-link {
+  color: #012332;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  background-color: #012332;
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-collapse: collapse;
+}
+
+th, td {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid;
+} 
+
+button {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+tr:hover {
+  background-color: #0e3b4f;
 }
 
 @keyframes App-logo-spin {
@@ -33,6 +189,6 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 }
